@@ -1,0 +1,54 @@
+@mixin flexCenter(
+  $direction: column,
+  $content: center,
+  $items: center,
+  $display: flex
+) {
+  display: $display;
+  justify-content: $content;
+  align-items: $items;
+  flex-direction: $direction;
+}
+
+@mixin backgroundImage(
+  $image: "",
+  $size: cover,
+  $position: center,
+  $repeat: no-repeat
+) {
+  background-image: $image;
+  background-size: $size;
+  background-position: $position;
+  background-repeat: $repeat;
+}
+
+@mixin button(
+  $color: $primary,
+  $hoverColor: $primary,
+  $hoverBgColor: $white,
+  $borderColor: $primary,
+  $width: 100px,
+  $height: 40px,
+  $bgColor: $white
+) {
+  width: $width;
+  height: $height;
+  background-color: $bgColor;
+  border: 1px solid $borderColor;
+  color: $color;
+  &:hover {
+    color: $hoverColor;
+    background: $hoverBgColor;
+  }
+}
+@mixin text(
+  $color: $info,
+  $fontSize: 1.5rem,
+  $fontWeight: 500,
+  $textAlign: center
+) {
+  color: $color;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  text-align: $textAlign;
+}

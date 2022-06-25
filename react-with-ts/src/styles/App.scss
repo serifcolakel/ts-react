@@ -1,0 +1,24 @@
+@import "./veriables", "./breakpoints", "./mixins";
+.App {
+  @include flexCenter(column, center, center);
+  gap: 20px;
+  table {
+    background: $primary;
+    color: $grayLighter;
+    tr {
+      th {
+        background-color: $black;
+        padding: 4px;
+        border-bottom: 1px solid $error;
+      }
+    }
+  }
+  text-align: center;
+  @include md {
+    color: $primary-orange;
+    border: 1px solid $error;
+  }
+  @include xl {
+    border: 8px solid $primary;
+  }
+}
