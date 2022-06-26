@@ -1,0 +1,19 @@
+@import "../../styles/veriables", "../../styles/breakpoints",
+  "../../styles/mixins";
+
+button {
+  padding: 4px 16px;
+  color: $footer;
+  font-size: x-large;
+  margin-inline: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: $white;
+  background-color: $info;
+  &:disabled {
+    color: $grayLight;
+    background-color: $gray;
+    border: 1px solid $grayLight;
+    cursor: not-allowed;
+  }
+}

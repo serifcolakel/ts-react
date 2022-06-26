@@ -1,7 +1,9 @@
-@import "./veriables", "./breakpoints", "./mixins";
-.App {
+@import "../../styles/veriables", "../../styles/breakpoints",
+  "../../styles/mixins";
+.Todo {
   @include flexCenter(column, center, center);
-  gap: 20px;
+  gap: 10px;
+  padding: 20px 0;
   table {
     background: $primary;
     color: $grayLighter;
@@ -20,5 +22,16 @@
   }
   @include xl {
     border: 8px solid $primary;
+  }
+
+  input {
+    border: 1px solid $footer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    &:focus {
+      outline: none !important;
+      border: 1px solid $primary-orange;
+      color: $primary;
+    }
   }
 }
