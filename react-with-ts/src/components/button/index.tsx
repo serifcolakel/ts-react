@@ -4,13 +4,29 @@ export default function Button({
   onClick,
   disabled,
   children,
+  variant,
 }: {
   onClick: () => void;
   disabled: boolean;
   children: React.ReactNode;
+  variant: string;
 }) {
+  let btnClass = variant;
+  switch (variant) {
+    case "primary":
+      btnClass = "btn primary";
+
+      break;
+    case "secondary":
+      btnClass = "btn secondary";
+
+      break;
+
+    default:
+      break;
+  }
   return (
-    <button disabled={disabled} onClick={onClick}>
+    <button className={btnClass} disabled={disabled} onClick={onClick}>
       {children}
     </button>
   );

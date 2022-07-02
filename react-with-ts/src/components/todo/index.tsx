@@ -73,23 +73,12 @@ export default function Todo() {
         }}
       />
 
-      {/* <input
-        id="isDone"
-        type="checkbox"
-        name="isDone"
-        checked={values.isDone}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-          setValues({
-            ...values,
-            [e.target.name]: e.target.checked,
-          });
-        }}
-      /> */}
       <Button
+        variant="secondary"
         disabled={values.description.length < 8 || values.name.length < 8}
         onClick={addTodo}
       >
-        Delete
+        Ekle
       </Button>
 
       {todos.length > 0 && (
@@ -108,12 +97,14 @@ export default function Todo() {
                 <td>{todo.isDone ? "Bitti" : "Devam ediyor."}</td>
                 <td>
                   <Button
+                    variant="primary"
                     disabled={!todo.isDone}
                     onClick={() => deleteTodo(todo.name)}
                   >
                     Delete
                   </Button>
                   <Button
+                    variant="primary"
                     disabled={false}
                     onClick={() => completeTodo(todo.name)}
                   >

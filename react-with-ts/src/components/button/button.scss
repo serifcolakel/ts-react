@@ -1,7 +1,7 @@
 @import "../../styles/veriables", "../../styles/breakpoints",
   "../../styles/mixins";
 
-button {
+.btn {
   padding: 4px 16px;
   color: $footer;
   font-size: x-large;
@@ -10,9 +10,12 @@ button {
   cursor: pointer;
   color: $white;
   background-color: $info;
+  &.secondary {
+    background-color: $success !important;
+  }
   &:disabled {
-    color: $grayLight;
-    background-color: $gray;
+    color: white;
+    background-color: $gray !important;
     border: 1px solid $grayLight;
     cursor: not-allowed;
   }
